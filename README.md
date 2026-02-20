@@ -218,9 +218,3 @@ public/
  images/  
 
 ---
-
-# ⚙️ Installation locale
-
-```bash
-npm install
-npm run dev
