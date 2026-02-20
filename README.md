@@ -1,345 +1,226 @@
-🕰️ TimeTravel Agency – Webapp Interactive
+# 🕰️ TimeTravel Agency — Webapp Interactive
 
-Webapp moderne et immersive pour une agence fictive de voyage temporel premium.
+**Webapp moderne et immersive pour une agence fictive de voyage temporel premium.**  
+Projet pédagogique réalisé avec Next.js, TypeScript, Tailwind CSS et IA conversationnelle.
 
-Projet pédagogique réalisé avec Next.js (App Router) + TypeScript + Tailwind CSS, intégrant :
+---
 
-🌌 Landing immersive
-
-🌍 3 destinations temporelles interactives
-
-🤖 Chatbot IA (mode démo ou API réelle)
-
-🧠 Quiz de recommandation personnalisé
-
-📝 Formulaire de réservation intelligent
-
-✨ Animations subtiles & UX premium
-
-🚀 Démo en ligne
+## 🚀 Démo en ligne
 
 👉 https://euro-site-france--eenzocl.replit.app
 
-🛠️ Stack Technique
+---
 
-Next.js (App Router)
+# 🌌 Concept du projet
 
-TypeScript
+TimeTravel Agency est une plateforme web interactive permettant de :
 
-Tailwind CSS
+- Découvrir des destinations temporelles immersives  
+- Interagir avec un agent conversationnel intelligent  
+- Recevoir des recommandations personnalisées  
+- Réserver et planifier un voyage temporel  
 
-Framer Motion (animations)
+L’expérience est pensée premium, immersive et mobile-first, avec un design sombre élégant et des animations subtiles.
 
-API Route interne /api/chat
+---
 
-Mode IA compatible :
+# 🛠️ Stack technique
 
-Mistral
+## Frontend
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Framer Motion (animations)
 
-OpenRouter
+## Backend
+- API Route `/api/chat`
+- Mode IA compatible :
+  - Mistral
+  - OpenRouter
+  - Groq
+- Mode démo intégré (fonctionne sans clé API)
 
-Groq
+---
 
-Aucune dépendance lourde ou exotique.
+# ✨ Fonctionnalités du site
 
-✨ Fonctionnalités principales
-🏠 Landing Page immersive (/)
+## 🏠 Landing Page immersive
 
-Hero section avec faux background vidéo (fallback gradient animé)
+- Hero avec animation / vidéo de fond (fallback gradient animé)
+- Thème sombre premium + accents dorés `#d4af37`
+- Présentation de l’agence :
+  - Luxe
+  - Sécurité temporelle
+  - Accompagnement
+  - Temporal Protocol™
+- CTA vers :
+  - Destinations
+  - Réservation
+  - Chatbot
 
-Thème sombre premium + accents dorés #d4af37
+---
 
-Présentation agence :
+## 🌍 Destinations temporelles
 
-Luxe
+### 🇫🇷 Paris 1889
+- Belle Époque  
+- Exposition Universelle  
+- Tour Eiffel  
+- Voyage culturel raffiné  
 
-Sécurité temporelle
+### 🦖 Crétacé (-65M)
+- Dinosaures  
+- Jungle préhistorique  
+- Expédition guidée  
+- Aventure immersive  
 
-Accompagnement personnalisé
+### 🎨 Florence 1504
+- Renaissance  
+- Michel-Ange  
+- Art & architecture  
+- Voyage élégant  
 
-Temporal Protocol™
+---
 
-CTA vers :
+## 🧩 Cards interactives
 
-Destinations
+- Hover : glow + zoom image  
+- Reveal informations  
+- Navigation vers pages détails  
 
-Réservation
+---
 
-Chatbot
+## 📄 Pages détails destinations
 
-🌍 Galerie des destinations (/destinations)
+Chaque page contient :
 
-3 destinations interactives :
-
-🇫🇷 Paris 1889
-
-Belle Époque
-
-Exposition Universelle
-
-Tour Eiffel
-
-Risque faible
-
-Séjour culturel raffiné
-
-🦖 Crétacé (-65M)
-
-Dinosaures
-
-Jungle préhistorique
-
-Expédition guidée
-
-Risque élevé
-
-Aventure immersive
-
-🎨 Florence 1504
-
-Renaissance italienne
-
-Michel-Ange
-
-Art & architecture
-
-Risque modéré
-
-Élégance artistique
-
-🎯 Cards interactives
-
-Hover : glow doré + zoom image
-
-Reveal “En savoir plus”
-
-Navigation vers page détail
-
-📄 Pages Détails Destinations (/destinations/[slug])
-
-Chaque destination contient :
-
-Hero immersif
-
-Résumé narratif premium
-
-“À ne pas manquer”
-
-Bloc dynamique “Conseils de l’agent”
-
-Règles de sécurité temporelle (checklist)
-
-CTA “Planifier ce voyage”
+- Hero immersif
+- Résumé narratif
+- “À ne pas manquer”
+- Conseils de l’agent
+- Règles de sécurité temporelle
+- CTA “Planifier ce voyage”
 
 Les données sont centralisées dans :
 
-src/data/destinations.ts
+`src/data/destinations.ts`
 
-Toutes les pages lisent depuis cette source unique.
+---
 
-🤖 Chatbot IA (Widget flottant)
+## 🤖 Chatbot IA
 
-Bulle flottante bas-droite
+Widget flottant en bas à droite.
 
-Historique messages
+Fonctionnalités :
 
-Placeholder :
+- Historique de conversation
+- Conseils sur destinations
+- Réponses FAQ agence
+- Suggestions personnalisées
+- Aide à la réservation
 
-"Posez-moi vos questions sur les voyages temporels…"
+### Personnalité
 
-Personnalité
+Assistant professionnel, chaleureux, passionné d’histoire et expert crédible en voyage temporel de luxe.
 
-Assistant virtuel professionnel, chaleureux, passionné d’histoire, expert crédible en voyage temporel de luxe.
+---
 
-Il peut répondre à :
+## 🧠 Backend IA
 
-Questions sur les destinations
+Route :
 
-Prix
+`POST /api/chat`
 
-Conseils personnalisés
+### Mode Démo
+- Réponses générées via règles + FAQ
 
-FAQ agence
+### Mode IA réel
+Si clé fournie :
 
-Aide à la réservation
+- Mistral
+- OpenRouter
+- Groq
 
-🧠 Backend IA
+Les clés sont stockées côté serveur uniquement.
 
-Route API :
+---
 
-POST /api/chat
+## 🧪 Quiz de recommandation
 
-Reçoit :
+4 questions interactives :
 
-{
-  "messages": [{ "role": "user", "content": "..." }]
-}
-Deux modes :
-🔹 Mode Démo (sans clé API)
-
-Réponses générées par règles + FAQ interne
-
-Recommandations basées sur mots-clés
-
-🔹 Mode IA réel (si clé fournie)
-
-Supporte :
-
-Mistral
-
-OpenRouter
-
-Groq
-
-⚠️ Les clés sont uniquement côté serveur (jamais exposées client).
-
-🧩 Quiz de recommandation
-
-4 questions :
-
-Type d’expérience
-
-Période préférée
-
-Ambiance
-
-Activité idéale
+- Type d’expérience
+- Période préférée
+- Ambiance
+- Activité idéale
 
 Résultat :
 
-Scoring automatique
+- Destination recommandée
+- Explication personnalisée
+- CTA vers réservation
 
-Destination recommandée
+---
 
-Explication personnalisée
+## 📝 Formulaire de réservation
 
-Si IA active → reformulation enrichie
+Page `/book` :
 
-Bouton vers /book avec destination pré-sélectionnée
-
-📝 Formulaire de réservation (/book)
-
-Champs :
-
-Destination
-
-Dates départ / retour
-
-Taille du groupe (1–6)
-
-Préférences
-
-Niveau de confort (Standard / Premium / Ultra)
+- Destination
+- Dates
+- Groupe (1–6)
+- Préférences
+- Niveau de confort
 
 Validation :
 
-Dates cohérentes
-
-Champs requis
-
-Message de confirmation stylé
+- Champs requis
+- Dates cohérentes
+- Message de confirmation stylé
 
 Option :
 
-Récapitulatif généré (template ou IA)
+- Itinéraire généré automatiquement (IA ou template)
 
-🎨 Design & UX
+---
 
-Thème sombre premium
+# 🎨 Design & UX
 
-Accents dorés #d4af37
+- Dark mode premium
+- Accents dorés `#d4af37`
+- Animations Framer Motion :
+  - Fade-in scroll
+  - Hover interactions
+- Mobile-first
+- Accessibilité :
+  - Navigation clavier
+  - aria-label
+- Lazy loading images
+- Lighthouse friendly
 
-Animations Framer Motion :
+---
 
-Fade-in au scroll
+# 📂 Structure du projet
 
-Hover subtil
+app/  
+ page.tsx  
+ destinations/  
+ book/  
+ about/  
+ api/chat/  
 
-Mobile-first
+src/  
+ components/  
+ data/  
+ styles/  
 
-Accessibilité :
+public/  
+ images/  
 
-aria-label
+---
 
-navigation clavier
+# ⚙️ Installation locale
 
-Lazy loading images
-
-Lighthouse friendly
-
-📂 Structure du projet
-app/
-  page.tsx
-  destinations/
-  book/
-  about/
-  api/chat/
-
-src/
-  data/destinations.ts
-  components/
-  styles/
-
-Assets placeholders prévus pour être remplacés facilement par les visuels du projet précédent.
-
-⚙️ Installation locale
+```bash
 npm install
 npm run dev
-
-Build :
-
-npm run build
-npm start
-🔐 Configuration IA (optionnel)
-
-Créer un fichier :
-
-.env.local
-
-Exemple :
-
-MISTRAL_API_KEY=
-OPENROUTER_API_KEY=
-GROQ_API_KEY=
-
-Ou utiliser .env.example fourni.
-
-📸 Remplacement des images
-
-Les images actuelles sont des placeholders.
-
-Pour les remplacer :
-
-Ajouter vos visuels dans public/images/
-
-Modifier src/data/destinations.ts
-
-Mettre à jour les chemins
-
-📖 Transparence IA
-
-Code assisté par IA générative
-
-Chatbot : modèle léger (si clé API fournie)
-
-Mode démo intégré pour usage pédagogique
-
-🎓 Contexte pédagogique
-
-Projet réalisé dans le cadre d’un module M1/M2 Digital & IA.
-
-Objectifs :
-
-Architecture moderne Next.js
-
-Intégration IA responsable
-
-UX premium
-
-Déploiement fonctionnel
-
-Documentation open source claire
-
-📜 Licence
-
-Projet pédagogique — usage académique.
